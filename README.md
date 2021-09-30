@@ -4,14 +4,14 @@ A sentiment categorization system for tweets is designed using classical machine
 
 ## Running Mode
 
-Predictions
+Training 
 
 ```bash
-python run_assignment1.py --input_path <path_to_input> --solution_path <path_to_solution>
+bash run-train.sh <data_directory> <model_directory>
 ```
 
 Testing
 
 ```bash
-python run_checker.py --ground_truth_path <path_to_ground_truth> --solution_path <path_to_solution>
+bash run-test.sh <model_directory> <input_file_path> <output_file_path>
 ```
