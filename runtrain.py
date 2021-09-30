@@ -42,7 +42,7 @@ def preprocess(x_df):
     # x_df = x_df.apply(lambda sen : re.sub(r"http(s?)\S+" ,"", sen, flags=re.IGNORECASE)) # remove hyperlinks
     # x_df = x_df.apply(lambda sen : re.sub(r"(www\.\S+)|(\S+\.com[^a-zA-Z\n\r])" ,"", sen, flags=re.IGNORECASE)) # remove websites
     # x_df = x_df.apply(lambda sen : re.sub(r"&\w+;" ,"", sen)) # remove html tags
-    x_df = x_df.apply(lambda sen : re.sub(r"(.)\1{2,}", r"\1\1", sen)) # replace char repeated > 2 times
+    x_df = x_df.apply(lambda sen : re.sub(r"(.)\1{2,}", r"\1\1", str(sen))) # replace char repeated > 2 times
     x_df = x_df.apply(lambda sen : stem_lemmatize(sen)) # stemming, lemmatize
     # x_df = x_df.apply(lambda sen : re.sub(r"\d+", "", sen)) # remove numbers
     # x_df = x_df.apply(lambda sen : sen.translate(str.maketrans(dict.fromkeys(string.punctuation)))) # remove punctuations
