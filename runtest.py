@@ -11,7 +11,10 @@ def add_args(parser):
 
 def main(args):
     df = pandas.read_csv(args.input_file, header=None, encoding='latin-1', delimiter='\n')
-    df = preprocess(df[0])
+    try:
+        df = preprocess(df[0])
+    except:
+        df = df[0]
 
     _vectorizer = pickle.load(open(os.path.join(args.model_dir, 'vectorizer'), 'rb'))
     x_test = _vectorizer.transform(df)
