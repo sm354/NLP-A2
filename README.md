@@ -2,6 +2,9 @@
 
 A sentiment categorization system for tweets is designed using classical machine learning algorithms (no deep learning). The dataset comprises of 1.6M tweets (available [here](https://www.kaggle.com/kazanova/sentiment140)) automatically labeled, and thus, noisy. This is part of [Natural Language Processing](https://www.cse.iitd.ac.in/~mausam/courses/col772/autumn2021/) course taken by [Prof Mausam](https://www.cse.iitd.ac.in/~mausam/).
 
+### Takeaways
+Using libraries like NLTK, Sci-kit Learn for pre-processing large text corpus and hand-engineered features
+
 ## Running Mode
 
 Training 
